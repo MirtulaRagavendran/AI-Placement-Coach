@@ -377,7 +377,7 @@ Return ONLY a valid JSON array like this:
 No extra text, no markdown, just the JSON array.
 """
                 r = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="llama3-70b-8192",
                     messages=[{"role":"user","content":q_prompt}]
                 )
                 try:
@@ -485,7 +485,7 @@ No extra text, no markdown, just the JSON array.
         if st.button("📅 Generate My Study Plan!", use_container_width=True):
             with st.spinner("AI creating your plan..."):
                 r = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="llama3-70b-8192",
                     messages=[{"role":"user","content":f"""
 You are an expert placement coach for Indian CSE students.
 Student: {ud.get('name')}, {ud.get('year')}
