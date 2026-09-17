@@ -306,7 +306,7 @@ else:
         if st.button("🤖 Get AI Analysis!", use_container_width=True, key="ai_dash"):
             with st.spinner("AI is thinking..."):
                 r = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="llama3-70b-8192",
                     messages=[{"role":"user","content":f"""
 You are an expert placement coach for Indian CSE students.
 Student: {ud.get('name')}, {ud.get('college')}, {ud.get('dept')}, {ud.get('year')}
