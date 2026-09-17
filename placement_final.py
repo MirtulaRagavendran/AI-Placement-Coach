@@ -306,7 +306,7 @@ else:
         if st.button("🤖 Get AI Analysis!", use_container_width=True, key="ai_dash"):
             with st.spinner("AI is thinking..."):
                 r = client.chat.completions.create(
-                    model="llama3-70b-8192",
+                    model="llama-3.1-8b-instant",
                     messages=[{"role":"user","content":f"""
 You are an expert placement coach for Indian CSE students.
 Student: {ud.get('name')}, {ud.get('college')}, {ud.get('dept')}, {ud.get('year')}
@@ -377,7 +377,7 @@ Return ONLY a valid JSON array like this:
 No extra text, no markdown, just the JSON array.
 """
                 r = client.chat.completions.create(
-                    model="llama3-70b-8192",
+                    model="llama-3.1-8b-instant",
                     messages=[{"role":"user","content":q_prompt}]
                 )
                 try:
@@ -485,7 +485,7 @@ No extra text, no markdown, just the JSON array.
         if st.button("📅 Generate My Study Plan!", use_container_width=True):
             with st.spinner("AI creating your plan..."):
                 r = client.chat.completions.create(
-                    model="llama3-70b-8192",
+                    model="llama-3.1-8b-instant",
                     messages=[{"role":"user","content":f"""
 You are an expert placement coach for Indian CSE students.
 Student: {ud.get('name')}, {ud.get('year')}
@@ -647,7 +647,7 @@ Be very specific with topics and YouTube channels.
         if st.button(f"🤖 Get {selected} Prep Strategy!", use_container_width=True):
             with st.spinner(f"Preparing {selected} strategy..."):
                 r = client.chat.completions.create(
-                    model="llama3-70b-8192",
+                    model="llama-3.1-8b-instant",
                     messages=[{"role":"user","content":f"""
 Expert placement coach for Indian MNC recruitment.
 Student: {ud.get('name')}, {ud.get('year')} CSE | Target: {selected} ({companies[selected]['package']})
@@ -679,7 +679,7 @@ Be very specific to {selected}'s actual process.
                         if st.button("🤖 Analyze Resume!", use_container_width=True):
                             with st.spinner("AI analyzing..."):
                                 r = client.chat.completions.create(
-                                    model="llama3-70b-8192",
+                                    model="llama-3.1-8b-instant",
                                     messages=[{"role":"user","content":f"""
 Analyze CSE student resume for placement readiness:
 {text[:3000]}
@@ -708,7 +708,7 @@ Be specific and constructive.
         if st.button("🎯 Start Interview!", use_container_width=True):
             with st.spinner("Preparing question..."):
                 q = client.chat.completions.create(
-                    model="llama3-70b-8192",
+                    model="llama-3.1-8b-instant",
                     messages=[{"role":"user","content":f"Generate ONE {idiff} {itype} interview question for a CSE fresher applying to Indian MNCs. Just the question, no extra text."}]
                 )
                 st.session_state.interview_question = q.choices[0].message.content
@@ -721,7 +721,7 @@ Be specific and constructive.
                 if answer.strip():
                     with st.spinner("Evaluating..."):
                         ev = client.chat.completions.create(
-                            model="llama3-70b-8192",
+                            model="llama-3.1-8b-instant",
                             messages=[{"role":"user","content":f"""
 Evaluate CSE fresher's interview answer for Indian MNC:
 Question: {st.session_state.interview_question}
