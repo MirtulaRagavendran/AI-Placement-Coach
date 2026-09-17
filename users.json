@@ -1,0 +1,27 @@
+{
+  "Mirtu": {
+    "name": "Mirtula Ragavendran",
+    "college": "Surya Engineering College",
+    "dept": "BE-CSE",
+    "year": "2nd Year",
+    "password": "5526e3cd9796520af9edb01753275eccc1433fa10cf0cb49bb0ba4e815aac1b9"
+  },
+  "dharshini": {
+    "name": "A.Dharshini",
+    "college": "Sri Krishna college of arts and science",
+    "dept": "Bsc computer science with coginitive system",
+    "year": "3rd Year",
+    "password": "f9a76f13274a7c19f92109f03edfd187e1b102011725cc8485a95a30e5f792e2",
+    "dsa_progress": {},
+    "aptitude_score": 0
+  },
+  "mirtula": {
+    "name": "Mirtula Ragavendran",
+    "college": "Surya Engineering College",
+    "dept": "BE-CSE",
+    "year": "4th Year",
+    "password": "0647201c241023890e17b08c760929a66bcf78c236f2bc463a0234e73e9adc93",
+    "dsa_progress": {},
+    "aptitude_score": 0
+  }
+}
